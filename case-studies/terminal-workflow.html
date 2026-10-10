@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Terminal Velocity Workflow - Nuralfian Rashid</title>
+    <!-- Relative path to unified global stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHJN29KC4E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CHJN29KC4E');
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="../index.html" class="site-logo">Alfian Rashid</a>
+            <nav class="site-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../index.html#case-studies">Case Studies</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="case-study">
+            <header class="case-study-header">
+                <h1 class="hero-title">Terminal Velocity: Replacing VS Code with Ubuntu, Tmux, and Neovim</h1>
+                <div class="case-study-meta">
+                    <span><strong>Role:</strong> Lead Engineer</span>
+                    <span><strong>Tech Stack:</strong> Ubuntu 26.04 LTS, Tmux, Neovim, CLI</span>
+                    <span><strong>Year:</strong> 2026</span>
+                </div>
+            </header>
+
+            <section class="case-study-section">
+                <h2>Overview / Context</h2>
+                <p>Development tools should amplify intent, not compete for cognitive bandwidth. Due to continuous VS Code updates, heavy UI overhead, and extension breakage, I rebuilt my workstation around <strong>Ubuntu 26.04.1 LTS</strong>, <strong>Tmux</strong>, and <strong>Neovim</strong>.</p>
+                <p>My primary motivation was removing unnecessary friction. Compared to Windows, Ubuntu eliminates forced system updates, background telemetry, and pre-installed consumer bloatware that constantly interfered with local dev environments. By mirroring my cloud environment locally, I eliminated OS bloat and unified my operational tooling across remote servers and local hardware.</p>
+            </section>
+
+            <section class="case-study-section">
+                <h2>System Architecture</h2>
+                <p>Rather than jumping between GUI windows, I use <strong>Tmux</strong> as an all-in-one process and session manager. A single terminal window is split into dedicated, functional panes that keep everything necessary in immediate line of sight:</p>
+                
+                <figure style="margin: var(--space-md) 0;">
+                    <img src="../images/tmux-setup.png" alt="Tmux workspace with 3 panes showing AI agent, research notes, and code" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-border);">
+                    <figcaption style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: var(--space-sm); text-align: center;">My 3-pane Tmux layout: AI Agent Operator (top), Research (bottom left), Codebase (bottom right).</figcaption>
+                </figure>
+            </section>
+
+            <section class="case-study-section">
+                <h2>Technical Challenges</h2>
+                <ul>
+                    <li><strong>Tooling Fatigue:</strong> Modern IDEs like VS Code often introduce feature bloat and breaking extension changes that don't add value per se, while creating unpredictable resource usage.</li>
+                    <li><strong>Cognitive Overhead:</strong> Constantly having to re-learn your IDE after background updates takes up significant time and mental energy, detracting from actual problem-solving.</li>
+                </ul>
+            </section>
+
+            <section class="case-study-section">
+                <h2>Execution & Implementation</h2>
+                <p>By relying on native terminal primitives like keyboard shortcuts, Unix pipes, Neovim registers, and Tmux session persistence, my workstation setup remains completely stable. It does not change underneath me unexpectedly.</p>
+                <p>Furthermore, working daily inside the exact same operating system used in production (e.g., Amazon EC2 instances) creates deep familiarity. Shell scripts and diagnostic tools run identically locally and remotely, meaning zero cognitive drift when debugging systemd services or network bindings.</p>
+            </section>
+
+            <section class="case-study-section">
+                <h2>Results & Learnings</h2>
+                <ul>
+                    <li><strong>Environment Parity Works:</strong> Running the same OS locally that you use in production builds muscle memory that pays off massively during live troubleshooting.</li>
+                    <li><strong>Context Switching Kills Flow:</strong> Keeping AI agents, notes, and code visible across single-window Tmux panes maintains focus better than ALT-tabbing between isolated GUI apps.</li>
+                    <li><strong>Simplicity Brings Longevity:</strong> Terminal workflows built on plain text and shell utilities survive API updates, IDE deprecations, and hardware upgrades.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Nuralfian Rashid &copy; 2026 &middot; Simply HTML and CSS</p>
+        </div>
+    </footer>
+</body>
+</html>
