@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Project Title - Nuralfian Rashid</title>
+    <!-- Relative path to unified global stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHJN29KC4E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CHJN29KC4E');
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="../index.html" class="site-logo">Alfian Rashid</a>
+            <nav class="site-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../index.html#case-studies">Case Studies</a></li>
+                    <li><a href="mailto:contact@example.com">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="case-study">
+            <header class="case-study-header">
+                <h1 class="hero-title">Project Title: A Subtitle Elaborating the Scope</h1>
+                <div class="case-study-meta">
+                    <span><strong>Role:</strong> Systems Architect</span>
+                    <span><strong>Tech Stack:</strong> AWS, Docker, Python</span>
+                    <span><strong>Year:</strong> 2026</span>
+                </div>
+            </header>
+
+            <section class="case-study-section">
+                <h2>Overview / Context</h2>
+                <p>Define the core problem, business scale, and the specific constraints of the project. Why did this initiative exist?</p>
+                <p>Example: The legacy monolithic system struggled to handle peak loads during marketing campaigns, leading to latency and downtime.</p>
+            </section>
+
+            <section class="case-study-section">
+                <h2>System Architecture</h2>
+                <p>Text-based breakdown of the architecture, data flow, and infrastructure design.</p>
+                <pre>
+[User Request] --> [Load Balancer]
+                        |
+            +-----------+-----------+
+            |                       |
+    [App Service A]         [App Service B]
+            |                       |
+            +-----------+-----------+
+                        |
+                  [Database Cluster]
+                </pre>
+            </section>
+
+            <section class="case-study-section">
+                <h2>Technical Challenges</h2>
+                <ul>
+                    <li><strong>Legacy Database Migration:</strong> Ensuring zero data loss while migrating live customer data to a new schema.</li>
+                    <li><strong>Service Discovery:</strong> Managing intra-service communication in a highly dynamic containerized environment.</li>
+                </ul>
+            </section>
+
+            <section class="case-study-section">
+                <h2>Execution & Implementation</h2>
+                <p>Concrete details on how the challenges were solved. Include configuration snippets, architectural decisions, or code.</p>
+                <h3>Docker Compose Example</h3>
+                <pre><code>version: '3.8'
+services:
+  web:
+    image: myapp:latest
+    ports:
+      - "80:80"
+    environment:
+      - DB_HOST=db
+  db:
+    image: postgres:14
+    volumes:
+      - db-data:/var/lib/postgresql/data</code></pre>
+            </section>
+
+            <section class="case-study-section">
+                <h2>Results & Learnings</h2>
+                <ul>
+                    <li><strong>Quantifiable Outcome:</strong> Reduced API latency by 45% and achieved 99.99% uptime over 6 months.</li>
+                    <li><strong>Key Takeaway:</strong> Investing heavily in automated integration testing prior to migration saved countless hours of debugging in production.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Nuralfian Rashid. Built manually with HTML & CSS.</p>
+        </div>
+    </footer>
+</body>
+</html>
